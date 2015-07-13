@@ -1,15 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout  
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
- 
-<com.google.android.maps.MapView
-    android:id="@+id/mapa"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:apiKey="AIzaSyA-MjzdSdFT6Ke9TrL7awNC2Skwj5ZeCNU"
-    android:clickable="true" />
- 
-</LinearLayout>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<fragment 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/mapa" 
+    tools:context=".MapsActivity"
+    android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <Button  android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/button2"
+                android:onClick="moveCamera"
+                android:text="ir a Central" />
+        <Button android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="animateCamera"
+                android:text="mi posición" />
+        <Button android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/button2"
+                android:onClick="addMarker"
+                android:text="marcador" />
+</RelativeLayout>

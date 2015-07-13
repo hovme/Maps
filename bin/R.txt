@@ -103,10 +103,13 @@ int drawable ic_plusone_standard_off_client 0x7f020022
 int drawable ic_plusone_tall_off_client 0x7f020023
 int drawable powered_by_google_dark 0x7f020024
 int drawable powered_by_google_light 0x7f020025
-int id action_settings 0x7f07001c
+int id action_settings 0x7f07001e
 int id adjust_height 0x7f070001
 int id adjust_width 0x7f070002
 int id book_now 0x7f070012
+int id button1 0x7f07001b
+int id button2 0x7f07001c
+int id button3 0x7f07001d
 int id buyButton 0x7f07000e
 int id buy_now 0x7f070013
 int id buy_with_google 0x7f070014
@@ -117,7 +120,6 @@ int id grayscale 0x7f070017
 int id holo_dark 0x7f070008
 int id holo_light 0x7f070009
 int id hybrid 0x7f070004
-int id map 0x7f07001b
 int id mapa 0x7f07001a
 int id match_parent 0x7f070010
 int id monochrome 0x7f070018
@@ -134,7 +136,6 @@ int id test 0x7f07000d
 int id wrap_content 0x7f070011
 int integer google_play_services_version 0x7f090000
 int layout activity_main 0x7f030000
-int layout map_activity 0x7f030001
 int menu main 0x7f0b0000
 int raw gtm_analytics 0x7f040000
 int string accept 0x7f060002
