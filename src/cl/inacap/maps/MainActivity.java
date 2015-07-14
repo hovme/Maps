@@ -29,7 +29,8 @@ public class MainActivity extends FragmentActivity implements OnMapClickListener
     private final LatLng Almacen_2 = new LatLng(-33.382942, -70.535322);
     private final LatLng Almacen_3 = new LatLng(-33.384859, -70.538777);
 	public static final PolylineOptions POLILINEA = new PolylineOptions()
-						    .add(new LatLng(-33.380604, -70.542736))
+							.add(new LatLng(-33.3801113,-70.5411158))
+							.add(new LatLng(-33.380604, -70.542736))
 						    .add(new LatLng(-33.381142, -70.542414)) 
 						    .add(new LatLng(-33.381513, -70.543036))
 						    .add(new LatLng(-33.381943, -70.542779))
