@@ -11,7 +11,7 @@
     android:id="@+id/mapa" 
     tools:context=".MapsActivity"
     android:name="com.google.android.gms.maps.SupportMapFragment" />
-    <Button  android:id="@+id/button1"
+        <Button  android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

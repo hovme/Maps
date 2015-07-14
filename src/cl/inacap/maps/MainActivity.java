@@ -9,6 +9,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 import android.location.Location;
 import android.os.Bundle;
@@ -26,13 +28,22 @@ public class MainActivity extends FragmentActivity implements OnMapClickListener
     private final LatLng Almacen_1 = new LatLng(-33.381706, -70.542736);
     private final LatLng Almacen_2 = new LatLng(-33.382942, -70.535322);
     private final LatLng Almacen_3 = new LatLng(-33.384859, -70.538777);
-    
+	public static final PolylineOptions POLILINEA = new PolylineOptions()
+						    .add(new LatLng(-33.380604, -70.542736))
+						    .add(new LatLng(-33.381142, -70.542414)) 
+						    .add(new LatLng(-33.381513, -70.543036))
+						    .add(new LatLng(-33.381943, -70.542779))
+						    .add(new LatLng(-33.381702, -70.542001))
+						    .add(new LatLng(-33.385052, -70.539313))
+						    .add(new LatLng(-33.384864, -70.538804))
+						    .add(new LatLng(-33.382933, -70.535247));
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpMapIfNeeded();
+        drawPolilyne(POLILINEA);
         //mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapa)).getMap();
         //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(PROD_FRESCOS, 15));
     }
@@ -110,6 +121,10 @@ public class MainActivity extends FragmentActivity implements OnMapClickListener
         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));	
     }
 
+    private void drawPolilyne(PolylineOptions options){
+        Polyline polyline = mMap.addPolyline(options);	
+    }
+    
 	@Override
 	public void onMapClick(LatLng arg0) {
 		// TODO Auto-generated method stub
